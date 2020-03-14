@@ -2,8 +2,8 @@ path = "D:/Ruby_test/drivers/chromedriver.exe"
 
 Given(/^I open a browser$/) do
   @browser = Selenium::WebDriver.for :chrome, driver_path:path
-  url = "http://www.old.practicalsqa.net"
-  @browser.navigate.to url
+  @browser.navigate.to 'http://www.old.practicalsqa.net'
+  @browser.manage.window.maximize
 end
 
 When(/^I login with user name "([^"]*)" and password "([^"]*)"$/) do |username, password|
@@ -13,5 +13,6 @@ When(/^I login with user name "([^"]*)" and password "([^"]*)"$/) do |username, 
 end
 
 Then(/^I verify Practical SQA page loaded$/) do
-  @browser.find_element(xpath: "//h1[@id='site-title']")
+  @browser.find_element(xpath: "//h1[@class='site-title']")
+  @browser.quit
 end

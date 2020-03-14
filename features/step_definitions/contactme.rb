@@ -2,8 +2,7 @@ path = "D:/Ruby_test/drivers/chromedriver.exe"
 
 Given(/^I navigate to Contact Me page$/) do
   @browser = Selenium::WebDriver.for :chrome, driver_path:path
-  url = "http://www.old.practicalsqa.net/contact-me/"
-  @browser.navigate.to url
+  @browser.navigate.to 'http://www.old.practicalsqa.net/contact-me/'
 end
 
 When(/^I verify Contact Me page loaded$/) do
