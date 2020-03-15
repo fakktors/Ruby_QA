@@ -3,6 +3,7 @@ path = "D:/Ruby_test/drivers/chromedriver.exe"
 Given(/^I navigate to Contact Me page$/) do
   @browser = Selenium::WebDriver.for :chrome, driver_path:path
   @browser.navigate.to 'http://www.old.practicalsqa.net/contact-me/'
+  @browser.manage.window.maximize
 end
 
 When(/^I verify Contact Me page loaded$/) do
