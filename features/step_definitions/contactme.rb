@@ -16,4 +16,5 @@ end
 
 And(/^I click on Post Comment button$/) do
   @browser.find_element(id: "submit").click
+  @browser.quit
 end
