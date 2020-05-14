@@ -1,2 +1,2 @@
-# Ruby_QA
-Test framework project
+# Ruby_Framework
+Test framework project at ruby + cucumber
